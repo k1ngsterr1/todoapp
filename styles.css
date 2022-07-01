@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(255, 178, 238);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 4px solid red;
+}
+
+.to-do-card{
+    width: 50%;
+    height: 80%;
+    border-radius: 25px;
+    box-shadow: 1px 10px 20px 2px rgba(0, 0, 0, 0.120);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.header{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    color: #f8adff;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(15px,2vw,30px);
+    border-bottom: 4px solid #add3ff;
+}
+
+.input{
+    margin-top: clamp(10px,0.9vw,25px);
+    width: 90%;
+    height: 9%;
+
+    display: flex;
+
+}
+
+form{
+    width: 100%;
+    display: flex;
+}
+
+.to-do{
+    width: 80%;
+    height: clamp(25px,1.57vw, 40px);
+    border: 2px solid rgb(160, 160, 160);
+    border-radius: 5px;
+}
+
+.to-do:focus{
+    outline: none;
+    border: 2px solid rgb(84, 147, 155);
+}
+
+.to-do::placeholder{
+    font-size: clamp(12px,0.749vw, 35px);
+    font-weight: bold;
+    color: rgb(255, 138, 161);
+    
+}
+
+input[type='text']{
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(12px, 0.749vw, 35px);
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.add{
+    height: clamp(25px, 1.57vw, 40px);
+    width: 20%;
+    background-color: #add3ff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: clamp(10px,0.789vw,20px);
+    border-radius: 5px;
+    margin-left: 50px;
+    transition: .2s;
+    border: 2px solid black;
+}
+
+.add:hover{
+    background-color: #cbe3ff;
+}
+
+.todolist{
+    width: 90%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.todoshtuka{
+    width: 100%;
+    height: 17%;
+    display:flex;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    font-size: clamp(15px,1.7vw,50px);
+    background-color: aliceblue;
+    border: 3px solid pink;
+}
+
+.delete{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: clamp(15px,0.9vw,25px);
+    height: 50%;
+    margin-right: 11px;
+    transition: 0.2s;
+    background-color: #ff5757;
+    border-radius: 5px;
+}
+
+.delete:hover{
+background-color: #d12f2f;
+color: white;
+}
+
+
+#check{
+    transform: scale(2);
+    margin-left: 11px;
+}
+
+@media screen  and (max-width: 512px) {
+.to-do::placeholder{
+    visibility: hidden;
+}
+}
